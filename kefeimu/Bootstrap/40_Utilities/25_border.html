@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+
+
+    <style>
+        .box {
+            height: 10vh;
+        }
+
+        .box>div {
+            display: inline-block;
+        }
+
+        div[class*='rounded'] {
+            width: 150px;
+        }
+
+        span {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            /* background-color: aqua; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h4>官方網站</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/utilities/borders/">https://getbootstrap.com/docs/5.2/utilities/borders/</a>
+        </p>
+        <hr>
+
+        <!-- 10. 為什麼這樣設定div不會出現? -->
+        <div class="w-25 h-100 bg-success">apple</div>
+        <hr>
+        <!-- 20. 複製貼上官網的範例，為什麼 border 測試不出來 -->
+        <span class="border">a</span>
+        <span class="border-top">b</span>
+        <span class="border-end">c</span>
+        <span class="border-bottom">d</span>
+        <span class="border-start">e</span>
+        <hr>
+        <span class="border "></span>
+        <span class="border-top"></span>
+        <span class="border-end"></span>
+        <span class="border-bottom"></span>
+        <span class="border-start"></span>
+        <!-- 21. 設定不同的邊線顏色 -->
+        <hr>
+        <span class="border border-info"></span>
+        <span class="border-top border-danger"></span>
+        <span class="border-end border-info"></span>
+        <span class="border-bottom border-info"></span>
+        <span class="border-start border-info"></span>
+        <!-- 23. 調整 border 的寬度： border-N -->
+        <hr>
+        <span class="border border-info border-1"></span>
+        <span class="border border-info border-2"></span>
+        <span class="border border-info border-3"></span>
+        <span class="border border-info border-4"></span>
+        <span class="border border-info border-5"></span>
+        <!-- 25. 設定邊框圓角 -->
+        <!--     .rounded-top    | .rounded-bottom  -->
+        <!--     .rounded-start  | .rounded-end     -->
+        <!--     .rounded-circle | .rounded-pill   -->
+        <hr>
+        <span class="h-100 bg-info border-info rounded"></span>
+        <span class="h-100 bg-info border-info rounded-top"></span>
+        <span class="h-100 bg-info border-info rounded-end"></span>
+        <span class="h-100 bg-info border-info rounded-bottom"></span>
+        <span class="h-100 bg-info border-info rounded-circle"></span>
+        <span class="h-100 bg-info border-info rounded-pill"></span>
+    </div>
+
+</body>
+
+</html>

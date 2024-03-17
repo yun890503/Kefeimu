@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+    <style>
+        div[class^="col"]:nth-child(odd) {
+            background-color: aquamarine;
+        }
+
+        [class^="col"]:nth-child(even) {
+            background-color: lightcoral;
+        }
+
+        div[class^="row"]:nth-child(odd) {
+            background-color: rgb(233, 41, 213);
+        }
+
+        [class^="row"]:nth-child(even) {
+            background-color: rgb(12, 136, 231);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row row-cols-4">
+        <div class="col-3 ">
+            <div class="row">
+                <div class="col-12">1</div>
+            </div>
+            <div class="row">
+                <div class="col-12">2</div>
+            </div>
+        </div>
+        <div class="col-3 ">
+            <div class="row">
+                <div class="col-12">3</div>
+            </div>
+            <div class="row">
+                <div class="col-12">4</div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="row">
+                <div class="col-12">5</div>
+            </div>
+            <div class="row">
+                <div class="col-12">6</div>
+            </div>
+        </div>
+        <div class="col-3">7</div>
+
+    </div>
+</body>
+
+</html>

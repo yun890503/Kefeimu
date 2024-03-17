@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員登入</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('./img/istockphoto-1445460608-2048x2048.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .login-form {
+            background: #ffffffff; /* semi-transparent white */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            
+        }
+
+        .social-icons {
+            margin: 20px 0;
+        }
+
+        .social-icon {
+            font-size: 40px;
+            margin: 0 10px;
+            color: #444;
+        }
+
+        .login-input {
+            margin-bottom: 20px;
+            height: 50px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            font-size: 18px;
+            padding: 0 20px;
+        }
+
+        .login-button {
+            width: 100%;
+            height: 50px;
+            border-radius: 25px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+
+        .login-footer {
+            margin-top: 30px;
+        }
+
+        .login-footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="login-form">
+        <h2 class="mb-4">登入</h2>
+        
+        
+        
+        <input type="email" class="form-control login-input" placeholder="電子郵件地址" required>
+        <input type="password" class="form-control login-input" placeholder="密碼" required>
+        
+        <button class="login-button">登入</button>
+        <div class="social-icons">
+            <a href="#" class="social-icon">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-line"></i>
+            </a>
+        </div>
+        
+        <div class="login-footer">
+            <a href="#">忘記密碼?</a>
+            <br>
+            <span>還不是會員?</span> <a href="#">註冊會員</a>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

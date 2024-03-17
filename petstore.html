@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kefeimu</title>
+    <link rel="stylesheet" href="./Bootstrap/_css/bootstrap.css">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .background-image {
+            position: relative;
+            /* 设置为相对定位，以便于之后使用绝对定位 */
+            height: 100%;
+            background-image: url('./img/istockphoto-1445460608-2048x2048.jpg');
+            /* 替换为您的图片路径 */
+            background-size: cover;
+            /* 背景图片覆盖整个容器 */
+            background-position: center;
+            /* 图片居中显示 */
+            background-repeat: no-repeat;
+            /* 图片不重复 */
+        }
+
+        .gradient-overlay {
+            position: absolute;
+            /* 设置为绝对定位，覆盖背景图片 */
+            top: 0;
+            left: 1800px;
+
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+            /* 渐变效果 */
+        }
+
+        /* 其他样式... */
+        .login-modal {
+            position: fixed;
+            /* 固定定位，始终显示在视口中 */
+            top: 50%;
+            /* 居中显示 */
+            left: 75%;
+            transform: translate(-50%, -50%);
+            /* 使用 transform 来精确居中 */
+            width: 900px;
+            /* 登录窗口的宽度 */
+            height: 1000px;
+            background: white;
+            /* 背景色 */
+            padding: 20px;
+            /* 内边距 */
+            border-radius: 5px;
+            /* 圆角边框 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* 简单的阴影 */
+            z-index: 1000;
+            /* 确保登录窗口位于其他元素之上 */
+        }
+
+        .login-modal h2 {
+            margin-top: 50px;
+            color: #333;
+            text-align: center;
+        }
+
+        .login-modal input {
+            margin-top: 50px;
+            width: calc(100% - 20px);
+            /* 减去padding */
+            /* margin-bottom: 10px; */
+            padding: 20px;
+            border: 5px solid #ddd;
+            border-radius: 3px;
+            border-radius: 10px;
+        }
+
+        .login-modal button {
+            margin-left: 200px;
+            margin-top: 100px;
+            width: 50%;
+            height: 100px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: #5cb85c;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-modal button:hover {
+            background-color: #4cae4c;
+        }
+
+        h2 {
+            font-size: 60px;
+        }
+
+        /* CSS样式 */
+        .form-input,
+        .form-button {
+            font-size: 16px;
+            /* 这里设置字体大小，您可以根据需要调整 */
+            margin: 5px 0;
+            /* 添加一些上下边距 */
+            padding: 10px;
+            /* 添加一些内边距 */
+            width: 100%;
+            /* 宽度设置为100%，让它们占满容器宽度 */
+        }
+
+        .form-button {
+            background-color: #007bff;
+            /* 一个简单的蓝色背景，您可以自定义颜色 */
+            color: white;
+            /* 白色文字 */
+            border: none;
+            /* 移除边框 */
+            cursor: pointer;
+            /* 鼠标悬停时显示手型光标 */
+        }
+
+        .form-input {
+            border: 1px solid #ced4da;
+            /* 给输入框添加一个边框 */
+            border-radius: 0.25rem;
+            /* 圆角边框 */
+        }
+
+        .login-options a {
+            text-decoration: none;
+            /* 移除下划线 */
+            color: #007bff;
+            /* 设置链接颜色，可以根据网站主题颜色调整 */
+            margin: 0 70px;
+            /* 链接之间的空间 */
+        }
+
+        /* 鼠标悬停时改变链接颜色 */
+        .login-options a:hover {
+            color: #014b9a;
+            /* 链接的悬停颜色，根据需要调整 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-image">
+        <div class="gradient-overlay"></div> <!-- 添加渐变覆盖层 -->
+        <!-- 页面内容 -->
+    </div>
+    <div class="login-modal">
+        <h2>會員登錄</h2>
+        <form action="login-process.php" method="POST">
+            <input type="text" name="username" placeholder="用戶名" required style="font-size: 30px;">
+            <input type="password" name="password" placeholder="密碼" required style="font-size: 30px;">
+            <button type="submit" style="font-size: 40px;">登錄</button>
+            <div class="login-options" style="margin-top: 150px; margin-left: 110px;">
+                <a href="forgot-password.php" class="forgot_password" style="font-size: 35px;">忘記密碼?</a>
+                <a href="guest-login.php" class="guest_login" style="font-size: 35px;">訪客登錄</a>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

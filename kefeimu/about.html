@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>品牌故事</title>
+
+<!-- Add Bootstrap for styling -->
+<link rel="stylesheet" href="./Bootstrap/_css/bootstrap.css">
+<!-- FontAwesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+<!-- 引入Bootstrap图标的CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 50px;
+  }
+  .header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .header h1 {
+    margin: 0;
+  }
+/* Custom styles for navigation bar */
+nav {
+    background-color: #f8f8f8;
+    /* Change this to match your brand colors */
+}
+
+nav a {
+    color: #333;
+    /* This is a dark grey, you can set it to what fits your logo */
+}
+
+.nav-link:hover {
+    color: white; /* 鼠标悬停时的文字颜色 */
+    background-color: #628ee6; /* 鼠标悬停时的背景色 */
+}
+.footer-link:hover {
+    color: white; /* 鼠标悬停时的文字颜色 */
+    background-color: #628ee6; /* 鼠标悬停时的背景色 */
+}
+
+.nav-item{
+    margin: 0 45px; 
+}
+
+/* Additional styles */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* 导航栏品牌（Logo）图片居中显示 */
+.navbar-brand {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* 在移动视图中，当导航栏折叠时，也保持居中对齐 */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        justify-content: center;
+    }
+}
+
+
+.no-bullets {
+    list-style-type: none; /* 去除列表前的点点 */
+    padding: 0; /* 移除默认的内边距 */
+    margin: 0; /* 移除默认的外边距 */
+    display: flex; /* 应用Flexbox布局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+  }
+  .no-bullets li {
+    margin-right: 10px; /* 在列表项之间添加一些空间 */
+  }
+  .no-bullets li:last-child {
+    margin-right: 0; /* 移除最后一个列表项的右外边距 */
+  }
+  a {
+    text-decoration: none; /* 去除下划线 */
+    color: white; /* 设置文字颜色为白色 */
+  }
+  .navbar {
+    z-index: 1000; /* 一个相对较高的值 */
+}
+
+/* 如果.navbar不起作用，尝试直接在下拉菜单上设置z-index */
+.dropdown-menu {
+    z-index: 1000; /* 一个相对较高的值 */
+}
+
+
+.brand-story {
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* 文字置中 */
+}
+
+.brand-story-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 20px;
+    margin: 20px auto; /* 圖片置中 */
+    display: block;
+}
+
+.brand-story h2 {
+    color: #333;
+    margin-top: 20px;
+}
+
+
+.brand-story p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: center; /* 更新這個屬性以居中文字 */
+    margin-bottom: 20px;
+}
+
+.brand-story a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.brand-story a:hover {
+    text-decoration: underline;
+}
+
+.brand-story strong {
+    color: #333;
+}
+
+.footer {
+    background-color: #333; /* 页脚背景颜色 */
+    color: white; /* 字体颜色 */
+    padding: 20px 0; /* 页脚内边距 */
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 居中对齐所有内容 */
+    text-align: center; /* 文本居中对齐 */
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* 水平居中对齐 */
+    align-items: center; /* 垂直居中对齐 */
+    width: 100%;
+    margin-bottom: 10px; /* 底部间距 */
+}
+
+.footer-row:last-child {
+    margin-bottom: 0;
+}
+
+.footer-row a,
+.footer-row p {
+    margin: 0 10px; /* 左右间距 */
+    color: white; /* 链接颜色 */
+    text-decoration: none; /* 移除链接下划线 */
+}
+
+.footer-icons a {
+    font-size: 1.5rem; /* 图标大小 */
+    margin: 0 5px; /* 图标间距 */
+}
+
+</style>
+</head>
+<body>
+    <header style="background-color: rgba(47, 69, 116);" class="pt-2 ">
+        <div class="d-flex">
+            <a class="navbar-brand pt-0 pb-0 " href="http://127.0.0.1:5500/kefeimu/home.html"><img src="./img/57029df9a678ec208ef26492e0e72a2f.jpg" alt="" style="width: 220px; height:120px" class="rounded"></a>
+            <div style="width: 280px;">
+                <ul class=" no-bullets">
+                    
+                    <li class="me-3"><a href="http://127.0.0.1:5500/kefeimu/petstore.html">會員登入</a></li>
+                    <li class="me-3"><a href="">購物車</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+        
+        <nav class="navbar navbar-expand-lg navbar-light mt-2">
+            <div class="collapse navbar-collapse" id="navbarNav" >
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle rounded" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            關於我們
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown" style=" z-index: 1000">
+                            <a class="dropdown-item" href="http://127.0.0.1:5500/kefeimu/about.html#about_we">關於克飛姆</a>
+                            <a class="dropdown-item" href="http://127.0.0.1:5500/kefeimu/about.html#contract_we">聯絡我們</a>
+                            <a class="dropdown-item" href="http://127.0.0.1:5500/kefeimu/about.html#serve">服務時間</a>
+                            
+                            <!-- 更多下拉选项 -->
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle rounded" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            最新資訊     
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown" style=" z-index: 1000">
+                            <a class="dropdown-item" href="#our-mission">最新優惠</a>
+                            <a class="dropdown-item" href="#team">貓咪食品</a>
+                            <a class="dropdown-item" href="#history">狗狗食品</a>
+                            <!-- 更多下拉选项 -->
+                        </div>
+                    </li>
+                   
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle rounded" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            產品目錄
+                            
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown" style=" z-index: 1000">
+                            <a class="dropdown-item" href="#our-mission">狗狗專屬</a>
+                            <a class="dropdown-item" href="#team">貓貓專屬</a>
+                            
+                            <!-- 更多下拉选项 -->
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle rounded" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            會員專區
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown" style=" z-index: 1000">
+                            <a class="dropdown-item" href="http://127.0.0.1:5500/kefeimu/petstore.html#">會員中心</a>
+                            <a class="dropdown-item" href="#team">點數兌換好禮</a>
+                            <!-- <a class="dropdown-item" href="#history">歷史訂單</a> -->
+                            <!-- 更多下拉选项 -->
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle rounded" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            客服專區
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown" style=" z-index: 1000">
+                            <a class="dropdown-item" href="#our-mission">常見問題解答</a>
+                            <a class="dropdown-item" href="#team">聯繫我們</a>
+                            <a class="dropdown-item" href="#team">表單提交</a>
+                            <a class="dropdown-item" href="#team">寵物FAQ</a>
+                            <a class="dropdown-item" href="#team">退換貨政策</a>
+                            <a class="dropdown-item" href="#team">條款與細則</a>
+                            <!-- <a class="dropdown-item" href="#history">歷史訂單</a> -->
+                            <!-- 更多下拉选项 -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+
+        <div class="container">
+            <div class="brand-story">
+              <img src="./img/iot-changes.jpg" alt="品牌故事圖片" class="brand-story-image">
+              <br>
+              <h4 style="font-size: 35px;" id="about_we">關於克飛姆</h2>
+              <p style="font-size: 20px;"class="brand-story-image">因著對毛寶貝的寵愛，我們致力於從全球各地寵物展中尋找優質產品，希望台灣的朋友有機會與歐美、日本同步享用好的東西。這過程當然不是件容易的事，我們一路堅持，因為我們知道您的寶貝值得！若您有發現好的商品需要我們為您引進，或是對寵物市場有興趣，想要合作，歡迎來信提案。Wish you all have your best friends!</p>
+              <br>
+              <h4 style="font-size: 35px;" id="contract_we">聯絡我們</h2>
+              <p style="font-size: 20px;"class="brand-story-image"><strong>客服電話：</strong>02-2697-2696<br>
+              <strong style="font-size: 20px;">傳真：</strong>02-2697-2693<br>
+              <strong style="font-size: 20px;">電子郵件：</strong><a href="mailto:mypetiia@gmail.com">mypetiia@gmail.com</a></p>
+              <br>
+              
+              <h4 style="font-size: 35px;" id="serve">服務時間</h2>
+                <div class="d-flex " style="margin-left: 290px;"> 
+                    
+              <p style="font-size: 20px;">週一至週五 09:00 - 12:00<br>
+              13:00 - 18:00<br>
+              ※週六日、春節、國定假日及其補假暫停出貨及服務</p><img src="./img/1Mo-UX.gif" style="margin-left:30px; padding-top: 0px;"  alt="">
+            </div>
+            </div>
+          </div>
+<br>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- First row of links -->
+        <div class="footer-row  ">
+            <a href="http://127.0.0.1:5500/kefeimu/Privacy%20Policy.html" class="footer-link rounded">隱私政策</a>
+            <a href="http://127.0.0.1:5500/kefeimu/Terms%20and%20Conditions.html"  class="footer-link rounded">條款與細則</a>
+            <a href="http://127.0.0.1:5500/kefeimu/Shipping%20policy.html" class="footer-link rounded">運送政策</a>
+            <a href="http://127.0.0.1:5500/kefeimu/Return%20and%20exchange%20policy.html" class="footer-link rounded">退換貨政策</a>
+        </div>
+        
+        <!-- Third row for phone number -->
+        <div class="footer-row">
+            <p >電話 / 04-26582006</p>
+        </div>
+        <!-- Fourth row for business hours -->
+        <div class="footer-row">
+            <p >營業時間 / 10:00-22:00</p>
+        </div>
+        <!-- Fifth row for email -->
+        <div class="footer-row">
+            <a href="mailto:hello@kefeimu.pet" class="footer-link rounded">hello@kefeimu.pet</a>
+        </div>
+        <!-- Sixth row for icons -->
+        <div class="social-icons" >
+            <a href="https://www.facebook.com/"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+            </svg></a>
+      
+            <a href="https://www.instagram.com/"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+            </svg></a>
+      
+            <a href="https://www.line.com/"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-line" viewBox="0 0 16 16">
+              <path d="M8 0c4.411 0 8 2.912 8 6.492 0 1.433-.555 2.723-1.715 3.994-1.678 1.932-5.431 4.285-6.285 4.645-.83.35-.734-.197-.696-.413l.003-.018.114-.685c.027-.204.055-.521-.026-.723-.09-.223-.444-.339-.704-.395C2.846 12.39 0 9.701 0 6.492 0 2.912 3.59 0 8 0M5.022 7.686H3.497V4.918a.156.156 0 0 0-.155-.156H2.78a.156.156 0 0 0-.156.156v3.486c0 .041.017.08.044.107v.001l.002.002.002.002a.15.15 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157m.791-2.924a.156.156 0 0 0-.156.156v3.486c0 .086.07.155.156.155h.562c.086 0 .155-.07.155-.155V4.918a.156.156 0 0 0-.155-.156zm3.863 0a.156.156 0 0 0-.156.156v2.07L7.923 4.832l-.013-.015v-.001l-.01-.01-.003-.003-.011-.009h-.001L7.88 4.79l-.003-.002-.005-.003-.008-.005h-.002l-.003-.002-.01-.004-.004-.002-.01-.003h-.002l-.003-.001-.009-.002h-.006l-.003-.001h-.004l-.002-.001h-.574a.156.156 0 0 0-.156.155v3.486c0 .086.07.155.156.155h.56c.087 0 .157-.07.157-.155v-2.07l1.6 2.16a.2.2 0 0 0 .039.038l.001.001.01.006.004.002.008.004.007.003.005.002.01.003h.003a.2.2 0 0 0 .04.006h.56c.087 0 .157-.07.157-.155V4.918a.156.156 0 0 0-.156-.156zm3.815.717v-.56a.156.156 0 0 0-.155-.157h-2.242a.16.16 0 0 0-.108.044h-.001l-.001.002-.002.003a.16.16 0 0 0-.044.107v3.486c0 .041.017.08.044.107l.002.003.002.002a.16.16 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156Z"/>
+            </svg></a>
+      
+            <a href="https://www.youtube.com/watch?v=WWsrdCKEcPI"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+              <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+            </svg></a>
+      
+            <a href="https://twitter.com/home"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+              <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+            </svg></a>
+      
+            <a href="https://www.tiktok.com/"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+              <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+            </svg></a>
+            
+        
+          </div>
+    </div>
+    
+      
+      
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- 引入Popper.js库 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.7.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
